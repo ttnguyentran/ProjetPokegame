@@ -157,6 +157,6 @@ class __TwigTemplate_08a92c01d6614332b2773e4834c94396d840aad0f76dd0641b57ac69f60
 \t\t</div>
 \t</div>
 
-{% endblock %}", "pokemon/entrainement_ok.html.twig", "C:\\Users\\tthan\\ProjetPokegame\\templates\\pokemon\\entrainement_ok.html.twig");
+{% endblock %}", "pokemon/entrainement_ok.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokemon\\entrainement_ok.html.twig");
     }
 }

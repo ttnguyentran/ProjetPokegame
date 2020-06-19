@@ -227,6 +227,6 @@ class __TwigTemplate_e1f2befdce4977d662d5f5e7475d31d510cbe575f40de3b2544292ddeae
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\tthan\\webtp6-master\\webtp6-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
     }
 }

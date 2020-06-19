@@ -225,6 +225,6 @@ class __TwigTemplate_72b90e6f9a78a2190d302d5e437ff426740e1684cff00d2858d116f215a
     </table>
 \t
 {% endblock %}
-", "magasin/index.html.twig", "C:\\Users\\tthan\\ProjetPokegame\\templates\\magasin\\index.html.twig");
+", "magasin/index.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\magasin\\index.html.twig");
     }
 }

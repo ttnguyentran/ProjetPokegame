@@ -434,6 +434,6 @@ class __TwigTemplate_4de72c27d78a22d1a5d3cd8343c60ee83b8743294d44d4e3272d9812b4b
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\tthan\\webtp6-master\\webtp6-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\http_client.html.twig");
     }
 }

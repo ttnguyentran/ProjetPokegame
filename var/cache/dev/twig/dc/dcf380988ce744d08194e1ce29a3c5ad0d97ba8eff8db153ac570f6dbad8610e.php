@@ -898,6 +898,6 @@ class __TwigTemplate_0e50df483eeb8ccd89249550d52e91d53e56de5bb3239eb07b88a10b1c5
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\tthan\\webtp6-master\\webtp6-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
     }
 }

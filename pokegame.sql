@@ -27,9 +27,9 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `pokemon`
 --
-
-CREATE TABLE `pokemon` (
-  `id` int(3) NOT NULL,
+DROP TABLE IF EXISTS `pokemon`;
+CREATE TABLE IF NOT EXISTS `pokemon` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
   `nom` varchar(30) NOT NULL,
   `sexe` varchar(30) NOT NULL,
   `xp` int(30) NOT NULL,
@@ -39,7 +39,9 @@ CREATE TABLE `pokemon` (
   `id_espece` int(11) DEFAULT NULL,
   `derniere_chasse` datetime DEFAULT NULL,
   `dernier_entrainement` datetime DEFAULT NULL,
-  `est_en_vente` tinyint(1) DEFAULT NULL
+  `est_en_vente` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dresseur_id_const` (`dresseur_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -47,8 +49,8 @@ CREATE TABLE `pokemon` (
 --
 -- Structure de la table `ref_elementary_type`
 --
-
-CREATE TABLE `ref_elementary_type` (
+DROP TABLE IF EXISTS `ref_elementary_type`;
+CREATE TABLE IF NOT EXISTS `ref_elementary_type` (
   `id` int(11) NOT NULL,
   `libelle` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
@@ -82,8 +84,8 @@ INSERT INTO `ref_elementary_type` (`id`, `libelle`) VALUES
 --
 -- Structure de la table `ref_pokemon_type`
 --
-
-CREATE TABLE `ref_pokemon_type` (
+DROP TABLE IF EXISTS `ref_pokemon_type`;
+CREATE TABLE IF NOT EXISTS `ref_pokemon_type` (
   `id` int(11) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `evolution` tinyint(1) NOT NULL,
@@ -255,8 +257,8 @@ INSERT INTO `ref_pokemon_type` (`id`, `nom`, `evolution`, `starter`, `type_courb
 --
 -- Structure de la table `type_by_zone`
 --
-
-CREATE TABLE `type_by_zone` (
+DROP TABLE IF EXISTS `type_by_zone`;
+CREATE TABLE IF NOT EXISTS `type_by_zone` (
   `id_zone_capture` int(11) NOT NULL,
   `id_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -295,20 +297,23 @@ INSERT INTO `type_by_zone` (`id_zone_capture`, `id_type`) VALUES
 --
 -- Structure de la table `user`
 --
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
-) ;
+  `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pieces` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `zone_capture`
 --
-
-CREATE TABLE `zone_capture` (
+DROP TABLE IF EXISTS `zone_capture`;
+CREATE TABLE IF NOT EXISTS `zone_capture` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

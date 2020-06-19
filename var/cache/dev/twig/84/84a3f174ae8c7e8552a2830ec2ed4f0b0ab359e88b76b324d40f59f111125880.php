@@ -176,6 +176,6 @@ class __TwigTemplate_43ef73062a5d4a0603a63719513ab1cad957ea1acbe633f7f4da070881b
 </div>
 
 {% endblock %}
-", "main/index.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\main\\index.html.twig");
+", "main/index.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\main\\index.html.twig");
     }
 }

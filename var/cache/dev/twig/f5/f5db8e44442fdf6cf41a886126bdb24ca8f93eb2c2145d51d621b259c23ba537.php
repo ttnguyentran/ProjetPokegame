@@ -208,6 +208,6 @@ class __TwigTemplate_cc48350688adf5b46ddac60acf50832616e1fec60198bc5ffe75597a5c6
         </tbody>
     </table>
 
-{% endblock %}", "pokedex/index.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\pokedex\\index.html.twig");
+{% endblock %}", "pokedex/index.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokedex\\index.html.twig");
     }
 }

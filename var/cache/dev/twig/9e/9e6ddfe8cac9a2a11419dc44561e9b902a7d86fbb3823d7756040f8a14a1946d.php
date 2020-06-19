@@ -155,6 +155,6 @@ class __TwigTemplate_a96cfc05cf80d3e5b341d31e5a86564a3298ba7e090b4eb2c21342c81d2
     <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "C:\\Users\\tthan\\webtp6-master\\webtp6-master\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\registration\\register.html.twig");
     }
 }

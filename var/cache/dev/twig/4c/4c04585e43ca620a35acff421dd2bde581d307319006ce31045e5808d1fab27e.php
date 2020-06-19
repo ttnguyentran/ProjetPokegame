@@ -193,6 +193,6 @@ class __TwigTemplate_9fefb39d04ebe7ce1d3c15158772500d04648d338e60ee880dfb4e804eb
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\tthan\\webtp6-master\\webtp6-master\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
     }
 }

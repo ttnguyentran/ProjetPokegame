@@ -162,6 +162,6 @@ class __TwigTemplate_fe590379f75edf8f75b5a46de86bf50348e419f482f7f4f0166d415da1d
 \t\t</div>
 \t</div>
 
-{% endblock %}", "magasin/acheter_ok.html.twig", "C:\\Users\\tthan\\ProjetPokegame\\templates\\magasin\\acheter_ok.html.twig");
+{% endblock %}", "magasin/acheter_ok.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\magasin\\acheter_ok.html.twig");
     }
 }

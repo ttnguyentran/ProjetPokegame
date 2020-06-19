@@ -226,6 +226,6 @@ class __TwigTemplate_c15f27f840e2e29702fdafe1f0d312fdcaf30ddcb51a36eeb5cb059cfe0
 
     <a href=\"{{ path('pokemon_type_new') }}\">Create new</a>
 {% endblock %}
-", "pokemon_type/index.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\pokemon_type\\index.html.twig");
+", "pokemon_type/index.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokemon_type\\index.html.twig");
     }
 }
