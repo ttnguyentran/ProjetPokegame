@@ -18,6 +18,7 @@ return [
     'capture_poke_dispo_index' => [[], ['_controller' => 'App\\Controller\\CaptureController::index'], [], [['text', '/capture/']], [], []],
     'capture_zone_index' => [['id'], ['_controller' => 'App\\Controller\\CaptureController::showZone'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/capture']], [], []],
     'capture_list_poke_par_zone' => [['id', 'zone_id'], ['_controller' => 'App\\Controller\\CaptureController::capturer'], [], [['variable', '/', '[^/]++', 'zone_id', true], ['variable', '/', '[^/]++', 'id', true], ['text', '/capture']], [], []],
+    'capture_ok' => [['id', 'zone_id', 'pokemon'], ['_controller' => 'App\\Controller\\CaptureController::capturerOK'], [], [['variable', '/', '[^/]++', 'pokemon', true], ['variable', '/', '[^/]++', 'zone_id', true], ['variable', '/', '[^/]++', 'id', true], ['text', '/capture']], [], []],
     'elementary_type_index' => [[], ['_controller' => 'App\\Controller\\ElementaryTypeController::index'], [], [['text', '/elementary/type/']], [], []],
     'elementary_type_new' => [[], ['_controller' => 'App\\Controller\\ElementaryTypeController::new'], [], [['text', '/elementary/type/new']], [], []],
     'elementary_type_show' => [['id'], ['_controller' => 'App\\Controller\\ElementaryTypeController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/elementary/type']], [], []],

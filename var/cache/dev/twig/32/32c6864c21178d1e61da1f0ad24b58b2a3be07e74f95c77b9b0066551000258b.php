@@ -205,6 +205,6 @@ class __TwigTemplate_0fcf4646d72867788fefd4eade94915687d067b598b3074cdab695b4e49
 
     {{ include('pokemon_type/_delete_form.html.twig') }}
 {% endblock %}
-", "pokemon_type/show.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\pokemon_type\\show.html.twig");
+", "pokemon_type/show.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokemon_type\\show.html.twig");
     }
 }

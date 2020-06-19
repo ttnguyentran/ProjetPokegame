@@ -81,6 +81,6 @@ class __TwigTemplate_c19b07532bab500d9217200fb9dafb38e7094ad081faaea226cc2111dae
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ pokemon_type.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "pokemon_type/_delete_form.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\pokemon_type\\_delete_form.html.twig");
+", "pokemon_type/_delete_form.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokemon_type\\_delete_form.html.twig");
     }
 }

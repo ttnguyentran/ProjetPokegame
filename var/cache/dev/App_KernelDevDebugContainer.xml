@@ -5077,10 +5077,11 @@
         <argument key="user" type="service" id=".errored..service_locator.VPb8Zl0.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.H0k.iJ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.b3rvIl8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CaptureController::capturer" type="service" id=".service_locator._eg97U3"/>
+        <argument key="App\Controller\CaptureController::capturerOK" type="service" id=".service_locator.6xvDzkh"/>
         <argument key="App\Controller\CaptureController::index" type="service" id=".service_locator.6xvDzkh"/>
         <argument key="App\Controller\CaptureController::showZone" type="service" id=".service_locator.xlDuWiy"/>
         <argument key="App\Controller\ElementaryTypeController::delete" type="service" id=".service_locator.WW8wIfc"/>
@@ -5104,6 +5105,7 @@
         <argument key="App\Controller\UserController::edit" type="service" id=".service_locator.VPb8Zl0"/>
         <argument key="App\Controller\UserController::show" type="service" id=".service_locator.VPb8Zl0"/>
         <argument key="App\Controller\CaptureController:capturer" type="service" id=".service_locator._eg97U3"/>
+        <argument key="App\Controller\CaptureController:capturerOK" type="service" id=".service_locator.6xvDzkh"/>
         <argument key="App\Controller\CaptureController:index" type="service" id=".service_locator.6xvDzkh"/>
         <argument key="App\Controller\CaptureController:showZone" type="service" id=".service_locator.xlDuWiy"/>
         <argument key="App\Controller\ElementaryTypeController:delete" type="service" id=".service_locator.WW8wIfc"/>
@@ -5630,12 +5632,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.H0k.iJ2"/>
+      <argument type="service" id=".service_locator.b3rvIl8"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.H0k.iJ2"/>
+      <argument type="service" id=".service_locator.b3rvIl8"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6018,7 +6020,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.H0k.iJ2"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.b3rvIl8"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

@@ -141,6 +141,6 @@ class __TwigTemplate_6d44a7d7c9d0a1d91bc4a09e29b0e5163c5ad47e63fadd4b9dc64d35d2f
         <button type=\"button\" onclick=\"location.href='{{ path('app_register') }}'\" class=\"btn btn-primary btn-lg\">S'enregistrer</button>
     </div>
 {% endblock %}
-", "registration/register_error.html.twig", "C:\\Users\\tthan\\webtp6\\templates\\registration\\register_error.html.twig");
+", "registration/register_error.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\registration\\register_error.html.twig");
     }
 }

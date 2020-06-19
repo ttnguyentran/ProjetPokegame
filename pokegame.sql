@@ -300,7 +300,7 @@ INSERT INTO `type_by_zone` (`id_zone_capture`, `id_type`) VALUES
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL UNIQUE,
   `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pieces` int(11) NOT NULL,
@@ -329,21 +329,6 @@ INSERT INTO `zone_capture` (`id`, `nom`) VALUES
 (4, 'forêt'),
 (5, 'plage');
 
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `migration_versions`
---
-ALTER TABLE `migration_versions`
-  ADD PRIMARY KEY (`version`);
-
---
--- Index pour la table `pokemon`
---
-ALTER TABLE `pokemon`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `ref_elementary_type`
@@ -369,15 +354,6 @@ ALTER TABLE `type_by_zone`
 ALTER TABLE `zone_capture`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `pokemon`
---
-ALTER TABLE `pokemon`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `ref_elementary_type`
@@ -391,11 +367,6 @@ ALTER TABLE `ref_elementary_type`
 ALTER TABLE `ref_pokemon_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
---
--- AUTO_INCREMENT pour la table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `zone_capture`

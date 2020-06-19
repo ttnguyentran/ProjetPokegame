@@ -47,32 +47,35 @@ return [
                 .')'
                 .'|/capture/([^/]++)(?'
                     .'|(*:189)'
-                    .'|/([^/]++)(*:206)'
+                    .'|/([^/]++)(?'
+                        .'|(*:209)'
+                        .'|/([^/]++)(*:226)'
+                    .')'
                 .')'
                 .'|/elementary/type/([^/]++)(?'
-                    .'|(*:243)'
-                    .'|/edit(*:256)'
                     .'|(*:264)'
+                    .'|/edit(*:277)'
+                    .'|(*:285)'
                 .')'
-                .'|/magasin/([^/]++)(*:290)'
+                .'|/magasin/([^/]++)(*:311)'
                 .'|/pokemon(?'
                     .'|/([^/]++)(?'
-                        .'|(*:321)'
+                        .'|(*:342)'
                         .'|/(?'
-                            .'|entrainer(*:342)'
-                            .'|vendre(*:356)'
+                            .'|entrainer(*:363)'
+                            .'|vendre(*:377)'
                         .')'
                     .')'
                     .'|s/([^/]++)(?'
-                        .'|(*:379)'
-                        .'|/edit(*:392)'
                         .'|(*:400)'
+                        .'|/edit(*:413)'
+                        .'|(*:421)'
                     .')'
                 .')'
                 .'|/user/([^/]++)(?'
-                    .'|(*:427)'
-                    .'|/edit(*:440)'
                     .'|(*:448)'
+                    .'|/edit(*:461)'
+                    .'|(*:469)'
                 .')'
             .')/?$}sDu',
     ],
@@ -85,20 +88,21 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         189 => [[['_route' => 'capture_zone_index', '_controller' => 'App\\Controller\\CaptureController::showZone'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        206 => [[['_route' => 'capture_list_poke_par_zone', '_controller' => 'App\\Controller\\CaptureController::capturer'], ['id', 'zone_id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        243 => [[['_route' => 'elementary_type_show', '_controller' => 'App\\Controller\\ElementaryTypeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        256 => [[['_route' => 'elementary_type_edit', '_controller' => 'App\\Controller\\ElementaryTypeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        264 => [[['_route' => 'elementary_type_delete', '_controller' => 'App\\Controller\\ElementaryTypeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        290 => [[['_route' => 'shop_acheter', '_controller' => 'App\\Controller\\MagasinController::acheter'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        321 => [[['_route' => 'pokemon_show', '_controller' => 'App\\Controller\\PokemonController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        342 => [[['_route' => 'pokemon_train', '_controller' => 'App\\Controller\\PokemonController::train'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        356 => [[['_route' => 'pokemon_sell', '_controller' => 'App\\Controller\\PokemonController::sell'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        379 => [[['_route' => 'pokemon_type_show', '_controller' => 'App\\Controller\\PokemonTypeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        392 => [[['_route' => 'pokemon_type_edit', '_controller' => 'App\\Controller\\PokemonTypeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        400 => [[['_route' => 'pokemon_type_delete', '_controller' => 'App\\Controller\\PokemonTypeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        427 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        440 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        448 => [
+        209 => [[['_route' => 'capture_list_poke_par_zone', '_controller' => 'App\\Controller\\CaptureController::capturer'], ['id', 'zone_id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        226 => [[['_route' => 'capture_ok', '_controller' => 'App\\Controller\\CaptureController::capturerOK'], ['id', 'zone_id', 'pokemon'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        264 => [[['_route' => 'elementary_type_show', '_controller' => 'App\\Controller\\ElementaryTypeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        277 => [[['_route' => 'elementary_type_edit', '_controller' => 'App\\Controller\\ElementaryTypeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        285 => [[['_route' => 'elementary_type_delete', '_controller' => 'App\\Controller\\ElementaryTypeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        311 => [[['_route' => 'shop_acheter', '_controller' => 'App\\Controller\\MagasinController::acheter'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        342 => [[['_route' => 'pokemon_show', '_controller' => 'App\\Controller\\PokemonController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        363 => [[['_route' => 'pokemon_train', '_controller' => 'App\\Controller\\PokemonController::train'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        377 => [[['_route' => 'pokemon_sell', '_controller' => 'App\\Controller\\PokemonController::sell'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        400 => [[['_route' => 'pokemon_type_show', '_controller' => 'App\\Controller\\PokemonTypeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        413 => [[['_route' => 'pokemon_type_edit', '_controller' => 'App\\Controller\\PokemonTypeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        421 => [[['_route' => 'pokemon_type_delete', '_controller' => 'App\\Controller\\PokemonTypeController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        448 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        461 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        469 => [
             [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

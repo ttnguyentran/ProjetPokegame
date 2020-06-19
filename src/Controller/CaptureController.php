@@ -22,6 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
  */
 class CaptureController extends AbstractController
 {
+	
 	/**
      * @Route("/", name="capture_poke_dispo_index", methods={"GET", "POST"})
      */
@@ -46,7 +47,7 @@ class CaptureController extends AbstractController
      * @Route("/{id}/{zone_id}", name="capture_list_poke_par_zone", methods={"GET", "POST"})
      */
     public function capturer(Request $request, $id, $zone_id, EntityRepository $entityRepository, PokemonRepository $pokemonRepository)
-    {	
+    {		
 		$listePokeInZone = $entityRepository->getPokemonByZone($zone_id);
 			
 		$random1 = rand(0, count($listePokeInZone)-1);
@@ -63,40 +64,46 @@ class CaptureController extends AbstractController
         }
 		
 		$niveau = 1;
-			
-		$form = $this->createForm(CaptureType::class, new Capture());
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) 
-		{		
-			$pokemonRepository->updateDerniereChasse($id);
-			
-            $captured_pokemon = new Pokemon();
-            $captured_pokemon->setNom($nomPoke);
-			$captured_pokemon->setIdEspece($poke['id']);
-            $captured_pokemon->setDresseurid($this->getUser()->getId());
-            $captured_pokemon->setXp(0);
-            $captured_pokemon->setNiveau(1);
-            $captured_pokemon->setPrix(0);
-            $date = new DateTime('0/0/0 0:0:0');
-            $date->format('d/m/Y H:i:s');
-            $captured_pokemon->setDerniereChasse($date);
-            $captured_pokemon->setDernierEntrainement($date);			
-            $captured_pokemon->setSexe($sexe);
-			
-			$entityManager = $this->getDoctrine()->getManager();
-			$entityManager->persist($captured_pokemon);
-            $entityManager->flush();
-
-            return $this->render('capture/capture_ok.html.twig', ['pokemon' => $captured_pokemon]);
-        }
+		
+		$randomPoke = '' . $poke['nom'] . ',' . $poke['id'] . ',' . $sexe;
 
         return $this->render('capture/capture.html.twig', [
-			'form' => $form->createView(), 
+			'randomPoke' => $randomPoke, 
 			'nom_pokemon' => $nomPoke,
 			'sexe' => $sexe,
 			'niveau' => $niveau,
+			'id' => $id, 
+			'zone_id' => $zone_id,
 		]);
     }
 	
+	
+	/**
+     * @Route("/{id}/{zone_id}/{pokemon}", name="capture_ok", methods={"GET", "POST"})
+     */
+    public function capturerOK($id, $zone_id, $pokemon, PokemonRepository $pokemonRepository)
+    {
+		$pokemon = explode(',', $pokemon);
+		
+		$pokemonRepository->updateDerniereChasse($id);
+			
+        $captured_pokemon = new Pokemon();
+        $captured_pokemon->setNom($pokemon[0]);
+		$captured_pokemon->setIdEspece($pokemon[1]);
+        $captured_pokemon->setDresseurid($this->getUser()->getId());
+        $captured_pokemon->setXp(0);
+        $captured_pokemon->setNiveau(1);
+        $captured_pokemon->setPrix(0);
+        $date = new DateTime('0/0/0 0:0:0');
+        $date->format('d/m/Y H:i:s');
+        $captured_pokemon->setDerniereChasse($date);
+        $captured_pokemon->setDernierEntrainement($date);			
+		$captured_pokemon->setSexe($pokemon[2]);
+			
+		$entityManager = $this->getDoctrine()->getManager();
+		$entityManager->persist($captured_pokemon);
+		$entityManager->flush();
+
+        return $this->render('capture/capture_ok.html.twig', ['pokemon' => $captured_pokemon]);
+    }
 }

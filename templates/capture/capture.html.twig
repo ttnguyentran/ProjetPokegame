@@ -11,9 +11,7 @@
 			<p><span class="app-bold">Sexe : </span>{{ sexe }}</p>
 			<p><span class="app-bold">Niveau : </span>{{ niveau }}</p>
 			
-			{{ form_start(form) }}
-				<button type="submit" class="btn" style="font-weight: bold; color: red">Capturer</button>
-			{{ form_end(form) }}
+			<a href= "{{ path('capture_ok', {'id': id, 'zone_id': 'zone_id', 'pokemon': randomPoke}) }}" class="btn" style="font-weight: bold; color: red">Capturer</button>
 			
 			</br>
 			<a href="{{ path('capture_poke_dispo_index') }}">Annuler</a>

@@ -140,6 +140,6 @@ class __TwigTemplate_70f9735966385df77ee425e76b6eeddd8e0287d3f5070b7bf4b9a28577e
     <div>
         <p><a href=\"{{ path('pokemon_index') }}\">Retour</a></p>
     </div>
-{% endblock %}", "pokemon/entrainement_ko.html.twig", "C:\\Users\\tthan\\ProjetPokegame\\templates\\pokemon\\entrainement_ko.html.twig");
+{% endblock %}", "pokemon/entrainement_ko.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\pokemon\\entrainement_ko.html.twig");
     }
 }

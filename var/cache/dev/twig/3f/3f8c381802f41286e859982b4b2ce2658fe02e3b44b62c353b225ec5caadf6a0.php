@@ -140,6 +140,6 @@ class __TwigTemplate_14701bcc8f528f66d1aa65d3541c5f362a19c4a0da9359f2d2f9fe930f7
     <div>
         <p><a href=\"{{ path('shop_index') }}\">Retour</a></p>
     </div>
-{% endblock %}", "magasin/acheter_ko.html.twig", "C:\\Users\\tthan\\ProjetPokegame\\templates\\magasin\\acheter_ko.html.twig");
+{% endblock %}", "magasin/acheter_ko.html.twig", "C:\\Users\\tthan\\git\\Pokegame\\ProjetPokegame\\templates\\magasin\\acheter_ko.html.twig");
     }
 }

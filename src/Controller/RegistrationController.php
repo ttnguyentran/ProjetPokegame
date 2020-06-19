@@ -84,7 +84,7 @@ class RegistrationController extends AbstractController
 
             } catch (UniqueConstraintViolationException $exception) {
                 return $this->render('registration/register_error.html.twig', [
-                    'error' => 'Erreur SQL, veuillez vous ré-enregistrer'
+                    'error' => 'Le pseudo existe déjà. Veuillez vous inscrire avec un autre pseudo.'
                 ]);
             }
 

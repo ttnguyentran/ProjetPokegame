@@ -102,19 +102,14 @@ class __TwigTemplate_4d6dd04fb3a414a832602552dbca7d94918229da8a995781a10fd64fe81
         echo twig_escape_filter($this->env, (isset($context["niveau"]) || array_key_exists("niveau", $context) ? $context["niveau"] : (function () { throw new RuntimeError('Variable "niveau" does not exist.', 12, $this->source); })()), "html", null, true);
         echo "</p>
 \t\t\t
-\t\t\t";
+\t\t\t<a href= \"";
         // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
-        echo "
-\t\t\t\t<button type=\"submit\" class=\"btn\" style=\"font-weight: bold; color: red\">Capturer</button>
-\t\t\t";
-        // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_end');
-        echo "
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("capture_ok", ["id" => (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 14, $this->source); })()), "zone_id" => "zone_id", "pokemon" => (isset($context["randomPoke"]) || array_key_exists("randomPoke", $context) ? $context["randomPoke"] : (function () { throw new RuntimeError('Variable "randomPoke" does not exist.', 14, $this->source); })())]), "html", null, true);
+        echo "\" class=\"btn\" style=\"font-weight: bold; color: red\">Capturer</button>
 \t\t\t
 \t\t\t</br>
 \t\t\t<a href=\"";
-        // line 19
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("capture_poke_dispo_index");
         echo "\">Annuler</a>
 \t\t\t
@@ -144,7 +139,7 @@ class __TwigTemplate_4d6dd04fb3a414a832602552dbca7d94918229da8a995781a10fd64fe81
 
     public function getDebugInfo()
     {
-        return array (  118 => 19,  112 => 16,  107 => 14,  102 => 12,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  113 => 17,  107 => 14,  102 => 12,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,9 +157,7 @@ class __TwigTemplate_4d6dd04fb3a414a832602552dbca7d94918229da8a995781a10fd64fe81
 \t\t\t<p><span class=\"app-bold\">Sexe : </span>{{ sexe }}</p>
 \t\t\t<p><span class=\"app-bold\">Niveau : </span>{{ niveau }}</p>
 \t\t\t
-\t\t\t{{ form_start(form) }}
-\t\t\t\t<button type=\"submit\" class=\"btn\" style=\"font-weight: bold; color: red\">Capturer</button>
-\t\t\t{{ form_end(form) }}
+\t\t\t<a href= \"{{ path('capture_ok', {'id': id, 'zone_id': 'zone_id', 'pokemon': randomPoke}) }}\" class=\"btn\" style=\"font-weight: bold; color: red\">Capturer</button>
 \t\t\t
 \t\t\t</br>
 \t\t\t<a href=\"{{ path('capture_poke_dispo_index') }}\">Annuler</a>

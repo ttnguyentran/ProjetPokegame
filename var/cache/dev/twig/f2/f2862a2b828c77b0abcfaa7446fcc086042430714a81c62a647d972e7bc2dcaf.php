@@ -104,7 +104,7 @@ class __TwigTemplate_a9de9910e5ea097c94c68d42a784987dbd9d3c04d8888696b87763d74c3
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
             // line 37
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\">S'enregistrer</a>
+            echo "\">S'inscrire</a>
 \t\t\t\t\t\t\t</li>
 
 \t\t\t\t\t\t";
@@ -298,7 +298,7 @@ class __TwigTemplate_a9de9910e5ea097c94c68d42a784987dbd9d3c04d8888696b87763d74c3
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ path('app_register') }}\">S'enregistrer</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ path('app_register') }}\">S'inscrire</a>
 \t\t\t\t\t\t\t</li>
 
 \t\t\t\t\t\t{% elseif app.user %}
