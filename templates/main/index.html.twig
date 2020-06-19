@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <div class="jumbotron">
+        <h1>Bienvenue sur PokéGame 2020 !</h1>
+		{% if not app.user %}
+			<p>
+				<a href="{{ path('app_register') }}" class="btn btn-primary btn-lg">Créer un compte</a>
+				<a href="{{ path('app_login') }}" class="btn btn-default">Se connecter</a>
+			</p>
+			
+		{% elseif app.user %}
+			<p>
+				<h5>Connecté(e) en tant que <span class="badge badge-pill badge-primary">{{ app.user.username }}</span></h5>
+				<h5><span class="badge badge-pill badge-primary">{{ app.user.pieces }}</span> PokePièce(s)</h5>
+			</p>
+		
+		{% endif %}	
+    </div>
+</div>
+
+{% endblock %}

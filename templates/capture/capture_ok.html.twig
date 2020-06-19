@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Pokémon{% endblock %}
+
+{% block body %}
+    <h3>Rencontrez votre nouveau Pokémon !</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nom</th>
+                <th>Sexe</th>
+                <th>Niveau</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ pokemon.id }}</td>
+                <td>{{ pokemon.nom }}</td>
+                <td>{{ pokemon.sexe }}</td>
+                <td>{{ pokemon.niveau }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('pokemon_index') }}">Aller à "Mes Pokémons"</a>
+{% endblock %}

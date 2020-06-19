@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Capture{% endblock %}
+
+{% block body %}
+    <h1>Capturer de Pokémons</h1>
+	
+	<h4>Veuillez choisir un de vos Pokémons pour partir en chasse : </h4>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pokemon in pokemons %}
+            <tr>
+                <td>{{ pokemon.id }}</td>
+				<td>{{ pokemon.nom }}</td>
+                <td>
+                    <a href="{{ path('capture_zone_index', {'id': pokemon.id}) }}">choisir</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Aucun Pokémon disponible</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+	
+{% endblock %}

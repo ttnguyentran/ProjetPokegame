@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vendre OK{% endblock %}
+
+{% block body %}
+    <h3>Votre Pokémon est en vente !</h3>
+	<h6>Rappel : vous ne pouvez plus entraîner ce Pokemon</h6>
+
+	<p><a href="{{ path('pokemon_index') }}">Retour</a></p>
+	
+{% endblock %}

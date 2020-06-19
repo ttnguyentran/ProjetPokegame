@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vendre un Pokémon{% endblock %}
+
+{% block body %}
+    <h3>Vendre un Pokémon</h3>
+
+    {{ form_start(form) }}
+	
+		{{ form_widget(form) }}
+		<button type="submit" class="btn">Mettre en vente</button>
+		
+    {{ form_end(form) }}
+	
+{% endblock %}

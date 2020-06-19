@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pokemon{% endblock %}
+
+{% block body %}
+    <div class="card" style="width: 80%;margin: auto">
+		<div class="card-body">
+			<h5 class="card-title">Fiche détaillée</h5>
+			<p><span class="app-bold">Numéro de Pokédex : </span>{{ espece.id }}</p>
+			<p><span class="app-bold">Nom : </span>{{ nom }}</p>
+			<p><span class="app-bold">Sexe : </span>{{ sexe }}</p>
+			<p><span class="app-bold">Niveau : </span>{{ niveau }}</p>
+			<p><span class="app-bold">Types :</span></p>
+			<ul>
+				<li>{{ type1 }}</li>
+				<li>{{ type2 }}</li>
+			</ul>
+			<p><span class="app-bold">Est en vente : </span>{{ estEnVente ? 'Yes' : 'No' }}</p>
+			<p><span class="app-bold">Prix : </span>{{ prix }}</p>
+			<p><span class="app-bold">Dernier entrainement : </span>{{ dernierEntrainement }}</p>
+			<p><span class="app-bold">Dernière chasse : </span>{{ derniereChasse }}</p>
+			<p>
+				<a href="{{ path('pokemon_train', {'id': pokemon.id}) }}">Entraîner</a>
+				<span>&emsp;&emsp;</span>
+				<a href="{{ path('pokemon_sell', {'id': pokemon.id}) }}">Mettre en vente</a>
+				<span>&emsp;&emsp;</span>
+				<a href="{{ path('pokemon_index') }}">Retour</a>
+			</p>
+			
+		</div>
+	</div>	
+
+{% endblock %}

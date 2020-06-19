@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Entraînement{% endblock %}
+
+{% block body %}
+    <h2>Erreur</h2>
+
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+
+    <div>
+        <p><a href="{{ path('pokemon_index') }}">Retour</a></p>
+    </div>
+{% endblock %}

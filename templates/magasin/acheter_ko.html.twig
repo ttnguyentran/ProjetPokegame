@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block body %}
+    <h2>Erreur</h2>
+
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+
+    <div>
+        <p><a href="{{ path('shop_index') }}">Retour</a></p>
+    </div>
+{% endblock %}

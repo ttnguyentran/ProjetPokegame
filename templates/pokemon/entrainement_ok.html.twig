@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultat Entraînement{% endblock %}
+
+{% block body %}
+    <h2>L'entraînement terminé</h2>
+
+    <div class="card" style="width: 80%;margin: auto">
+		<div class="card-body">
+			<h5 class="card-title">Information</h5>
+			<p><span class="app-bold">Nom : </span>{{ pokemon.nom }}</p>
+			<p><span class="app-bold">L'expérience gagnée : </span>{{ xpgagne }}</p>
+			<p><span class="app-bold">Niveau : </span>{{ pokemon.niveau }}</p>
+			<p><span class="app-bold">Dernier entraînement : </span>{{ dernierEntrainement }}</p>
+			<p><a href="{{ path('pokemon_index') }}">Retour</a></p>
+		</div>
+	</div>
+
+{% endblock %}
